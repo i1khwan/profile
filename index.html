@@ -38,7 +38,8 @@ body {
   background-color: var(--bg);
 
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* ===== LAYOUT & COMPONENTS ===== */
@@ -156,7 +157,12 @@ footer {
     grid-template-columns: 1fr;
     text-align: center;
   }
-
+@media (max-height: 700px) {
+  body {
+    align-items: flex-start;
+    padding-top: 24px; /* beri sedikit jarak atas */
+  }
+}
   .avatar {
     margin: 0 auto;
   }
@@ -257,3 +263,4 @@ footer {
 </body>
 
 </html>
+
